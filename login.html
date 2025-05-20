@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>Кіру</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .login-form {
+      max-width: 400px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-form">
+    <h1>Жүйеге кіру</h1>
+    <input type="text" id="username" placeholder="Логин"><br>
+    <input type="password" id="password" placeholder="Құпия сөз"><br>
+    <button class="btn" onclick="login()">Кіру</button>
+    <div id="loginResult" class="result"></div>
+  </div>
+  <script>
+    function login() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      if (user === 'user' && pass === '1234') {
+        localStorage.setItem('loggedIn', 'true');
+        window.location.href = 'index.html';
+      } else {
+        document.getElementById('loginResult').innerText = 'Қате логин немесе құпия сөз';
+      }
+    }
+  </script>
+</body>
+</html>
