@@ -1,1 +1,153 @@
-<!-- theme2_1.html placeholder -->
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>2.1 Компьютерді қолданудың теріс аспектілері</title>
+  <style>
+    body { font-family: sans-serif; background: #f5f7fa; margin: 40px; }
+    .container { max-width: 800px; margin: auto; background: #fff; padding: 30px;
+                 border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    h1 { color: #1a237e; }
+    .btn { background: #1a237e; color: white; padding: 10px 20px; border: none;
+           border-radius: 8px; cursor: pointer; margin-top: 20px; }
+    .btn:hover { background: #3949ab; }
+    .question { margin-top: 20px; }
+    .result { font-weight: bold; margin-top: 15px; }
+    img { max-width: 100%; border-radius: 8px; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html">← Басты бетке оралу</a>
+    <h1>2.1 Компьютерді қолданудың теріс аспектілері</h1>
+
+    <p>Компьютерді шамадан тыс және дұрыс пайдаланбау әртүрлі теріс салдарға әкелуі мүмкін:</p>
+    <ul>
+      <li>Көру қабілетінің нашарлауы</li>
+      <li>Отырыстағы қателіктерден дене ауырулары</li>
+      <li>Уақытты босқа өткізу (ойын, әлеуметтік желі)</li>
+      <li>Кибертәуелділік</li>
+    </ul>
+
+    <img src="img/negative.png" alt="Көзге зиян">
+
+    <p><strong>Мысал:</strong> Күн сайын бірнеше сағат бойы компьютерде ойын ойнау көзге және омыртқаға кері әсер етуі мүмкін.</p>
+
+    <div class="question">
+      <form id="quiz">
+        <p>1. Компьютердің теріс әсері қай органға тікелей әсер етеді?</p>
+        <label><input type="radio" name="q1" value="1"> Көз</label><br>
+        <label><input type="radio" name="q1" value="0"> Құлақ</label><br>
+
+        <p>2. Уақытты босқа өткізу мысалы:</p>
+        <label><input type="radio" name="q2" value="1"> Әлеуметтік желілерге тәуелділік</label><br>
+        <label><input type="radio" name="q2" value="0"> Онлайн оқу</label><br>
+
+        <p>3. Дұрыс отырмау қандай зардапқа әкелуі мүмкін?</p>
+        <label><input type="radio" name="q3" value="1"> Омыртқа ауруы</label><br>
+        <label><input type="radio" name="q3" value="0"> Жүрек соғысы</label><br>
+
+        <p>4. Компьютерлік тәуелділік дегеніміз:</p>
+        <label><input type="radio" name="q4" value="1"> Компьютерсіз өмір сүре алмау</label><br>
+        <label><input type="radio" name="q4" value="0"> Компьютерде сурет салу</label><br>
+
+        <p>5. Көзді қорғау үшін не істеу керек?</p>
+        <label><input type="radio" name="q5" value="1"> Демалу және көз жаттығулары</label><br>
+        <label><input type="radio" name="q5" value="0"> Мониторға жақын отыру</label><br>
+
+        <button type="button" class="btn" onclick="checkQuiz()">Жауаптарды тексеру</button>
+      </form>
+      <div class="result" id="result"></div>
+    </div>
+  </div>
+
+  <script>
+    function checkQuiz() {
+      const answers = ['1','1','1','1','1'];
+      let score = 0;
+      for (let i = 1; i <= 5; i++) {
+        const q = document.querySelector(`input[name=q${i}]:checked`);
+        if (q && q.value === answers[i - 1]) score++;
+      }
+      document.getElementById('result').innerText = `Дұрыс жауаптар саны: ${score} / 5`;
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>1.3 Компьютерлік желілер</title>
+  <style>
+    body { font-family: sans-serif; margin: 40px; background: #f5f7fa; }
+    .container { max-width: 800px; margin: auto; background: #fff; padding: 30px;
+                 border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    h1 { color: #1a237e; }
+    .btn { background: #1a237e; color: white; padding: 10px 20px; border: none;
+           border-radius: 8px; cursor: pointer; margin-top: 20px; }
+    .btn:hover { background: #3949ab; }
+    .question { margin-top: 20px; }
+    .result { font-weight: bold; margin-top: 15px; }
+    img { max-width: 100%; border-radius: 8px; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html">← Басты бетке оралу</a>
+    <h1>1.3 Компьютерлік желілер</h1>
+
+    <p><strong>Компьютерлік желі</strong> — бұл бірнеше компьютерді өзара байланыстыратын жүйе. Ол ақпаратпен алмасуға және ресурстарды ортақ пайдалануға мүмкіндік береді.</p>
+
+    <p>Желінің негізгі түрлері:</p>
+    <ul>
+      <li>Жергілікті желі (LAN)</li>
+      <li>Аймақтық желі (MAN)</li>
+      <li>Ғаламдық желі (WAN)</li>
+    </ul>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/NetworkTopologies.svg/600px-NetworkTopologies.svg.png" alt="Желі топологиялары">
+
+    <p><strong>Мысал:</strong> Мектептің барлық компьютерлері бір жергілікті желіге қосылған, бұл файлдар мен принтерлерді ортақ пайдалануға мүмкіндік береді.</p>
+
+    <div class="question">
+      <form id="quiz">
+        <p>1. Компьютерлік желінің басты мақсаты қандай?</p>
+        <label><input type="radio" name="q1" value="1"> Ақпарат алмасу және ресурстарды ортақ пайдалану</label><br>
+        <label><input type="radio" name="q1" value="0"> Бағдарлама орнату</label><br>
+
+        <p>2. Жергілікті желі дегеніміз не?</p>
+        <label><input type="radio" name="q2" value="1"> Бір ғимарат ішіндегі желі</label><br>
+        <label><input type="radio" name="q2" value="0"> Интернет желісі</label><br>
+
+        <p>3. WAN желісі қай кезде қолданылады?</p>
+        <label><input type="radio" name="q3" value="1"> Әлемдік деңгейде компьютерлерді біріктіру үшін</label><br>
+        <label><input type="radio" name="q3" value="0"> Бір бөлме ішіндегі байланыс үшін</label><br>
+
+        <p>4. Желі топологиясы нені сипаттайды?</p>
+        <label><input type="radio" name="q4" value="1"> Компьютерлердің байланыс құрылымын</label><br>
+        <label><input type="radio" name="q4" value="0"> Компьютердің жылдамдығын</label><br>
+
+        <p>5. Компьютерлік желіге мысал:</p>
+        <label><input type="radio" name="q5" value="1"> Мектеп желісі</label><br>
+        <label><input type="radio" name="q5" value="0"> Процессор</label><br>
+
+        <button type="button" class="btn" onclick="checkQuiz()">Жауаптарды тексеру</button>
+      </form>
+      <div class="result" id="result"></div>
+    </div>
+  </div>
+
+  <script>
+    function checkQuiz() {
+      const answers = ['1','1','1','1','1'];
+      let score = 0;
+      for (let i = 1; i <= 5; i++) {
+        const q = document.querySelector(`input[name=q${i}]:checked`);
+        if (q && q.value === answers[i - 1]) score++;
+      }
+      document.getElementById('result').innerText = `Дұрыс жауаптар саны: ${score} / 5`;
+    }
+  </script>
+</body>
+</html>

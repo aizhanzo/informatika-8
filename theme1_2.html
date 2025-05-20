@@ -1,1 +1,78 @@
-<!-- theme1_2.html placeholder -->
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>1.2 Процессор</title>
+  <style>
+    body { font-family: sans-serif; margin: 40px; background: #f5f7fa; }
+    .container { max-width: 800px; margin: auto; background: #fff; padding: 30px;
+                 border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    h1 { color: #1a237e; }
+    .btn { background: #1a237e; color: white; padding: 10px 20px; border: none;
+           border-radius: 8px; cursor: pointer; margin-top: 20px; }
+    .btn:hover { background: #3949ab; }
+    .question { margin-top: 20px; }
+    .result { font-weight: bold; margin-top: 15px; }
+    img { max-width: 100%; border-radius: 8px; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html">← Басты бетке оралу</a>
+    <h1>1.2 Процессор</h1>
+
+    <p><strong>Процессор</strong> — бұл компьютердің барлық есептеулерін және басқару операцияларын орындайтын негізгі құрылғысы.</p>
+
+    <p>Процессордың негізгі бөліктері:</p>
+    <ul>
+      <li>Арифметика-логикалық құрылғы (АЛҚ)</li>
+      <li>Басқару құрылғысы</li>
+      <li>Регистрлер</li>
+      <li>Шина (деректер, адрестік, басқару)</li>
+    </ul>
+
+    <img src="img/cpu.jpg" alt="Процессор құрылымы">
+
+    <p><strong>Мысал:</strong> Процессор программаның әрбір командасын ретімен орындайды, мысалы: есептеу, салыстыру, дерек жіберу және т.б.</p>
+
+    <div class="question">
+      <form id="quiz">
+        <p>1. Процессор дегеніміз не?</p>
+        <label><input type="radio" name="q1" value="1"> Компьютердің \"миы\"</label><br>
+        <label><input type="radio" name="q1" value="0"> Монитор</label><br>
+
+        <p>2. АЛҚ қандай функция атқарады?</p>
+        <label><input type="radio" name="q2" value="1"> Арифметикалық және логикалық операциялар</label><br>
+        <label><input type="radio" name="q2" value="0"> Дыбыс шығару</label><br>
+
+        <p>3. Басқару құрылғысының міндеті:</p>
+        <label><input type="radio" name="q3" value="1"> Командаларды басқару</label><br>
+        <label><input type="radio" name="q3" value="0"> Графика салу</label><br>
+
+        <p>4. Регистр не үшін керек?</p>
+        <label><input type="radio" name="q4" value="1"> Мәліметтерді уақытша сақтау</label><br>
+        <label><input type="radio" name="q4" value="0"> Дыбыс шығару</label><br>
+
+        <p>5. Шина қызметі:</p>
+        <label><input type="radio" name="q5" value="1"> Мәліметтерді тасымалдау</label><br>
+        <label><input type="radio" name="q5" value="0"> Экранды тазалау</label><br>
+
+        <button type="button" class="btn" onclick="checkQuiz()">Жауаптарды тексеру</button>
+      </form>
+      <div class="result" id="result"></div>
+    </div>
+  </div>
+
+  <script>
+    function checkQuiz() {
+      const answers = ['1','1','1','1','1'];
+      let score = 0;
+      for (let i = 1; i <= 5; i++) {
+        const q = document.querySelector(`input[name=q${i}]:checked`);
+        if (q && q.value === answers[i - 1]) score++;
+      }
+      document.getElementById('result').innerText = `Дұрыс жауаптар саны: ${score} / 5`;
+    }
+  </script>
+</body>
+</html>

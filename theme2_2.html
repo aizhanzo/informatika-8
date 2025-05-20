@@ -1,1 +1,56 @@
-<!-- theme2_2.html placeholder -->
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>2.2 Желідегі қауіпсіздік</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="index.html">← Басты бетке оралу</a>
+    <h1>2.2 Желідегі қауіпсіздік</h1>
+
+    <p>Желідегі қауіпсіздік – бұл жеке деректерді, құрылғыларды және желіні зиянкестерден қорғау процесі. Интернетті қолданғанда абай болу өте маңызды.</p>
+
+    <ul>
+      <li>Құпия сөздерді құпия сақтау</li>
+      <li>Фишинг сайттардан сақтану</li>
+      <li>Антивирус және брандмауэр пайдалану</li>
+      <li>Жалған Wi-Fi-дан сақ болу</li>
+    </ul>
+
+    <img src="img/cyber_security.png" alt="Желідегі қауіпсіздік">
+
+    <p><strong>Мысал:</strong> Егер біреу email арқылы сізден жеке дерек сұраса, бұл фишинг болуы мүмкін — мұндай хаттарға жауап беруге болмайды.</p>
+
+    <div class="question">
+      <form id="quiz2_2">
+        <p>1. Желідегі қауіпсіздік дегеніміз:</p>
+        <label><input type="radio" name="q1" value="1"> Ақпаратты қорғау шаралары</label><br>
+        <label><input type="radio" name="q1" value="0"> Файлдарды жою</label><br>
+
+        <p>2. Қайсысы қауіпті әрекет?</p>
+        <label><input type="radio" name="q2" value="1"> Бейтаныс сілтемені басу</label><br>
+        <label><input type="radio" name="q2" value="0"> Браузерді жаңарту</label><br>
+
+        <p>3. Құпия сөз қалай сақталуы керек?</p>
+        <label><input type="radio" name="q3" value="1"> Ешкімге айтпау керек</label><br>
+        <label><input type="radio" name="q3" value="0"> Әлеуметтік желіде сақтау</label><br>
+
+        <p>4. Антивирустың қызметі:</p>
+        <label><input type="radio" name="q4" value="1"> Зиянды бағдарламаларды анықтау және жою</label><br>
+        <label><input type="radio" name="q4" value="0"> Видео көру</label><br>
+
+        <p>5. Фишинг дегеніміз не?</p>
+        <label><input type="radio" name="q5" value="1"> Жалған сайт арқылы ақпарат ұрлау</label><br>
+        <label><input type="radio" name="q5" value="0"> Кино көру қызметі</label><br>
+
+        <button type="button" class="btn" onclick="checkQuiz('quiz2_2', ['1','1','1','1','1'])">Жауаптарды тексеру</button>
+      </form>
+      <div class="result"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

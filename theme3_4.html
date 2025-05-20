@@ -1,1 +1,55 @@
-<!-- theme3_4.html placeholder -->
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>3.4 Графикамен жұмыс</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="index.html">← Басты бетке оралу</a>
+    <h1>3.4 Графикамен жұмыс</h1>
+
+    <p>Графикамен жұмыс – бұл суреттерді, диаграммаларды, формаларды өңдеу және құру процесі. Электрондық кестелер мен басқа бағдарламаларда графиканы қолдану арқылы ақпаратты көрнекі көрсетуге болады.</p>
+
+    <ul>
+      <li>Диаграмма құру</li>
+      <li>Түс пен стиль таңдау</li>
+      <li>Графикалық объектілермен жұмыс</li>
+    </ul>
+
+    <img src="img/chart_design.png" alt="Диаграмма және графика">
+
+    <p><strong>Мысал:</strong> Excel бағдарламасында сандық мәліметтерден баған немесе секторлық диаграмма құруға болады.</p>
+
+    <div class="question">
+      <form id="quiz3_4">
+        <p>1. Графика не үшін қолданылады?</p>
+        <label><input type="radio" name="q1" value="1"> Ақпаратты көрнекі көрсету үшін</label><br>
+        <label><input type="radio" name="q1" value="0"> Мәтінді жасыру үшін</label><br>
+
+        <p>2. Диаграмма мысалы:</p>
+        <label><input type="radio" name="q2" value="1"> Секторлық диаграмма</label><br>
+        <label><input type="radio" name="q2" value="0"> Кесте жолы</label><br>
+
+        <p>3. Баған диаграммасында не көрсетіледі?</p>
+        <label><input type="radio" name="q3" value="1"> Сан мәндерінің салыстыруы</label><br>
+        <label><input type="radio" name="q3" value="0"> Сурет файл атауы</label><br>
+
+        <p>4. Графиканы өзгерту үшін не істеу керек?</p>
+        <label><input type="radio" name="q4" value="1"> Стиль немесе түсін өзгерту</label><br>
+        <label><input type="radio" name="q4" value="0"> Оны өшіру</label><br>
+
+        <p>5. Excel бағдарламасында графикамен жұмыс қай мәзірде?</p>
+        <label><input type="radio" name="q5" value="1"> Кірістіру (Вставка)</label><br>
+        <label><input type="radio" name="q5" value="0"> Файл</label><br>
+
+        <button type="button" class="btn" onclick="checkQuiz('quiz3_4', ['1','1','1','1','1'])">Жауаптарды тексеру</button>
+      </form>
+      <div class="result"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
