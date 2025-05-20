@@ -3,17 +3,18 @@
 <html lang="kk">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>8-сынып Информатика</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    if (!localStorage.getItem('loggedIn')) {
-      window.location.href = 'login.html';
-    }
-  </script>
 </head>
 <body>
-  <div class="container">
-    <h1>8-сынып Информатика</h1>
+  <div class="hero">
+    <img src="img/logo.png" alt="Логотип">
+    <h1>ИНФОРМАТИКА</h1>
+    <h2>8-СЫНЫП ЭЛЕКТРОНДЫ ОҚУЛЫҚ</h2>
+    <a href="#chapters" class="cta">ТАРАУЛАРҒА ӨТУ</a>
+  </div>
+  <div class="container" id="chapters">
     <h2>1-Тарау: Ақпарат және ақпараттық процестер</h2>
     <p><a href="theme1_1.html">1.1 Ақпаратты өлшеу</a></p>
     <p><a href="theme1_2.html">1.2 Процессор</a></p>
@@ -27,5 +28,6 @@
     <p><a href="theme3_3.html">3.3 Қолданбалы есептерді шешу</a></p>
     <p><a href="theme3_4.html">3.4 Графикамен жұмыс</a></p>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

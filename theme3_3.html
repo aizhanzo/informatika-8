@@ -2,6 +2,7 @@
 <html lang="kk">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3.3 Қолданбалы есептерді шешу</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,45 +11,39 @@
     <a href="index.html">← Басты бетке оралу</a>
     <h1>3.3 Қолданбалы есептерді шешу</h1>
 
-    <p>Қолданбалы есептер – бұл нақты өмірден алынған, компьютерлік бағдарламалармен шешілетін есептер. Электрондық кестелер оларды шешуде үлкен көмек береді.</p>
+    <h2>Теория</h2>
+    <p>Excel электрондық кестесі арқылы күнделікті өмірде кездесетін қаржылық, статистикалық, логикалық есептерді шешуге болады. Формулалар мен функциялар есептеуді автоматтандырады.</p>
 
-    <p>Мысалы:</p>
-    <ul>
-      <li>Бюджет жоспарлау</li>
-      <li>Оқушылар бағаларын есептеу</li>
-      <li>Жалақыны автоматты түрде есептеу</li>
-    </ul>
+    <h2>Мысал</h2>
+    <p>Мысалы: Жалақы = Сағат саны × Тариф. Формула: =B2*C2</p>
 
-    <img src="img/applied_tasks.png" alt="Қолданбалы есеп мысалы">
+    <img src="img/applied_tasks.png" alt="Қолданбалы есеп">
 
-    <p><strong>Мысал:</strong> Жалақыны есептеу үшін формула қолдануға болады: <code>=B2*B3</code> (сағат саны * сағаттық төлем).</p>
+    <h2>Тест</h2>
+    <form id="theme3_3">
+      <p>1. Excel қайда қолданылады?</p>
+      <label><input type="radio" name="q1" value="1"> Қаржы, талдау үшін</label><br>
+      <label><input type="radio" name="q1" value="0"> Сурет салу үшін</label><br>
 
-    <div class="question">
-      <form id="quiz3_3">
-        <p>1. Қолданбалы есеп дегеніміз не?</p>
-        <label><input type="radio" name="q1" value="1"> Нақты өмірден алынған есеп</label><br>
-        <label><input type="radio" name="q1" value="0"> Ойын тапсырмасы</label><br>
+      <p>2. Формула неден басталады?</p>
+      <label><input type="radio" name="q2" value="1"> =</label><br>
+      <label><input type="radio" name="q2" value="0"> #</label><br>
 
-        <p>2. Excel-де есептерді шешу үшін:</p>
-        <label><input type="radio" name="q2" value="1"> Формулалар мен функциялар қолданылады</label><br>
-        <label><input type="radio" name="q2" value="0"> Кино көріледі</label><br>
+      <p>3. =A1*B1 не істейді?</p>
+      <label><input type="radio" name="q3" value="1"> Көбейтеді</label><br>
+      <label><input type="radio" name="q3" value="0"> Бөледі</label><br>
 
-        <p>3. Оқушылар бағаларын есептеу — бұл:</p>
-        <label><input type="radio" name="q3" value="1"> Қолданбалы есеп</label><br>
-        <label><input type="radio" name="q3" value="0"> Сурет салу</label><br>
+      <p>4. Ақпаратты көшіру үшін:</p>
+      <label><input type="radio" name="q4" value="1"> Ctrl + C</label><br>
+      <label><input type="radio" name="q4" value="0"> Ctrl + F</label><br>
 
-        <p>4. Формула дегеніміз:</p>
-        <label><input type="radio" name="q4" value="1"> Есептеуді автоматтандыратын жазылым</label><br>
-        <label><input type="radio" name="q4" value="0"> Мәтін жазу әдісі</label><br>
+      <p>5. Есеп шешімін көрнекі ету үшін:</p>
+      <label><input type="radio" name="q5" value="1"> Диаграмма қолдану</label><br>
+      <label><input type="radio" name="q5" value="0"> Қара түспен бояу</label><br>
 
-        <p>5. =B2*B3 не істейді?</p>
-        <label><input type="radio" name="q5" value="1"> Екі ұяшық мәнін көбейтеді</label><br>
-        <label><input type="radio" name="q5" value="0"> Ұяшықты өшіреді</label><br>
-
-        <button type="button" class="btn" onclick="checkQuiz('quiz3_3', ['1','1','1','1','1'])">Жауаптарды тексеру</button>
-      </form>
-      <div class="result"></div>
-    </div>
+      <button type="button" class="btn" onclick="checkQuiz('theme3_3', ['1','1','1','1','1'])">Жауаптарды тексеру</button>
+    </form>
+    <div class="result" id="result_theme3_3"></div>
   </div>
 
   <script src="script.js"></script>

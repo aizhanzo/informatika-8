@@ -2,6 +2,7 @@
 <html lang="kk">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3.2 Кірістірілген функциялар</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,39 +11,41 @@
     <a href="index.html">← Басты бетке оралу</a>
     <h1>3.2 Кірістірілген функциялар</h1>
 
-    <p>Кірістірілген функциялар — Excel және басқа кестелік процессорлардағы дайын формулалар. Олар есептеуді жеңілдетеді және уақытты үнемдейді.</p>
+    <h2>Теория</h2>
+    <p>Кірістірілген функциялар Excel бағдарламасында есептеулерді жеңілдетеді. Мысалы, =SUM() — қосу, =AVERAGE() — орташа мән табу, =IF() — шартты логикаға негізделген нәтиже береді.</p>
 
-    <ul>
-      <li><code>=SUM(A1:A5)</code> — қосынды</li>
-      <li><code>=AVERAGE(A1:A5)</code> — орташа мән</li>
-      <li><code>=MAX(A1:A5)</code> — ең үлкен мән</li>
-      <li><code>=MIN(A1:A5)</code> — ең кіші мән</li>
-    </ul>
+    <h2>Мысал</h2>
+    <p>=SUM(A1:A10) — A1 ден A10 дейінгі ұяшықтардағы сандардың қосындысын есептейді.</p>
 
-    <img src="img/functions.png" alt="Excel функциялары мысалы">
+    <img src="img/functions.png" alt="Функциялар">
 
-    <p><strong>Мысал:</strong> =SUM(B2:B10) формуласы B2–ден B10-ға дейінгі барлық ұяшықтардың қосындысын есептейді.</p>
+    <h2>Тест</h2>
+    <form id="theme3_2">
+      <p>1. =SUM не істейді?</p>
+      <label><input type="radio" name="q1" value="1"> Қосады</label><br>
+      <label><input type="radio" name="q1" value="0"> Алады</label><br>
 
-    <div class="question">
-      <form id="quiz3_2">
-        <p>1. Функция дегеніміз не?</p>
-        <label><input type="radio" name="q1" value="1"> Дайын формула</label><br>
-        <label><input type="radio" name="q1" value="0"> Сурет салу</label><br>
+      <p>2. =AVERAGE не үшін қажет?</p>
+      <label><input type="radio" name="q2" value="1"> Орташа мән табу үшін</label><br>
+      <label><input type="radio" name="q2" value="0"> Бірінші мәнді табу үшін</label><br>
 
-        <p>2. SUM функциясының қызметі:</p>
-        <label><input type="radio" name="q2" value="1"> Қосындыны есептеу</label><br>
-        <label><input type="radio" name="q2" value="0"> Мәтін енгізу</label><br>
+      <p>3. =IF қандай функция?</p>
+      <label><input type="radio" name="q3" value="1"> Логикалық</label><br>
+      <label><input type="radio" name="q3" value="0"> Графикалық</label><br>
 
-        <p>3. Ең үлкен мәнді анықтау үшін қолданылатын функция:</p>
-        <label><input type="radio" name="q3" value="1"> MAX</label><br>
-        <label><input type="radio" name="q3" value="0"> MIN</label><br>
+      <p>4. =ROUND не істейді?</p>
+      <label><input type="radio" name="q4" value="1"> Дөңгелектейді</label><br>
+      <label><input type="radio" name="q4" value="0"> Қосады</label><br>
 
-        <p>4. Орташа мәнді табатын функция:</p>
-        <label><input type="radio" name="q4" value="1"> AVERAGE</label><br>
-        <label><input type="radio" name="q4" value="0"> SUM</label><br>
+      <p>5. Excel функциясын қалай бастайды?</p>
+      <label><input type="radio" name="q5" value="1"> = таңбасымен</label><br>
+      <label><input type="radio" name="q5" value="0"> ! таңбасымен</label><br>
 
-        <p>5. =MIN(A1:A5) не береді?</p>
-        <label><input type="radio" name="q5" value="1"> Ең кіші мән</label><br>
-        <label><input type="radio" name="q5" value="0"> Ең үлкен мән</label><br>
+      <button type="button" class="btn" onclick="checkQuiz('theme3_2', ['1','1','1','1','1'])">Жауаптарды тексеру</button>
+    </form>
+    <div class="result" id="result_theme3_2"></div>
+  </div>
 
-        <button type="button" class="btn" onclick="checkQuiz('quiz3_2', ['1','1]()_
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,35 +1,57 @@
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+  font-family: sans-serif;
+  background: #f5f7fa;
   margin: 0;
-  overflow-x: hidden;
 }
 .container {
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
   background: #fff;
-  padding: 40px 20px;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-  margin-top: -100px;
-  position: relative;
-  z-index: 2;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
 }
 h1, h2 {
-  color: #0d47a1;
+  color: #1a237e;
 }
 a {
-  display: inline-block;
+  display: block;
   margin: 8px 0;
   font-size: 18px;
-  color: #1a237e;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-a:hover {
   color: #0d47a1;
-  transform: translateX(5px);
+  text-decoration: none;
+}
+.hero {
+  height: 100vh;
+  background-image: url('img/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.hero img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+.cta {
+  padding: 14px 28px;
+  background: #fff;
+  color: #1a237e;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+.cta:hover {
+  background: #e3e3ff;
 }
 .question {
   margin-top: 20px;

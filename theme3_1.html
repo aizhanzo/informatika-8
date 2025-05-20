@@ -2,6 +2,7 @@
 <html lang="kk">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3.1 Статистикалық мәліметтер</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,45 +11,39 @@
     <a href="index.html">← Басты бетке оралу</a>
     <h1>3.1 Статистикалық мәліметтер</h1>
 
-    <p>Статистикалық мәліметтер – бұл кестелерде сақталатын және өңделетін сандар мен деректер жиынтығы. Электрондық кестелерде мәліметтерді енгізіп, олар бойынша талдау жасауға болады.</p>
+    <h2>Теория</h2>
+    <p>Электрондық кестеде статистикалық функциялар арқылы орташа, ең үлкен және ең кіші мәндер есептеледі. Excel бағдарламасында бұл =AVERAGE, =MAX, =MIN формулаларымен жүзеге асады.</p>
 
-    <ul>
-      <li>Сандық деректерді енгізу</li>
-      <li>Орташа мәнін табу</li>
-      <li>Санақ жүргізу</li>
-      <li>Диаграмма құру</li>
-    </ul>
+    <h2>Мысал</h2>
+    <p>=AVERAGE(A1:A5) — A1 мен A5 аралығындағы ұяшықтардағы орташа мәнді есептейді.</p>
 
-    <img src="img/statistics.png" alt="Статистикалық кесте мысалы">
+    <img src="img/statistics.png" alt="Статистикалық функциялар">
 
-    <p><strong>Мысал:</strong> Оқушылардың бағаларын енгізіп, орташа балл мен ең жоғары бағаны автоматты түрде есептеуге болады.</p>
+    <h2>Тест</h2>
+    <form id="theme3_1">
+      <p>1. Орташа мән формуласы:</p>
+      <label><input type="radio" name="q1" value="1"> =AVERAGE()</label><br>
+      <label><input type="radio" name="q1" value="0"> =SUM()</label><br>
 
-    <div class="question">
-      <form id="quiz3_1">
-        <p>1. Статистикалық мәлімет дегеніміз не?</p>
-        <label><input type="radio" name="q1" value="1"> Сандық деректер</label><br>
-        <label><input type="radio" name="q1" value="0"> Тек мәтін</label><br>
+      <p>2. MAX не есептейді?</p>
+      <label><input type="radio" name="q2" value="1"> Ең үлкен мән</label><br>
+      <label><input type="radio" name="q2" value="0"> Кесте атауы</label><br>
 
-        <p>2. Орташа мәнді табу үшін:</p>
-        <label><input type="radio" name="q2" value="1"> Барлық мәндердің қосындысын санына бөлу</label><br>
-        <label><input type="radio" name="q2" value="0"> Ең үлкен мәнді таңдау</label><br>
+      <p>3. MIN не үшін қолданылады?</p>
+      <label><input type="radio" name="q3" value="1"> Ең кіші мән табу</label><br>
+      <label><input type="radio" name="q3" value="0"> Сандар қосу</label><br>
 
-        <p>3. Кестеде мәліметтер қалай сақталады?</p>
-        <label><input type="radio" name="q3" value="1"> Ұяшықтарда</label><br>
-        <label><input type="radio" name="q3" value="0"> Беттерде</label><br>
+      <p>4. Статистика үшін қолданылатын құрал:</p>
+      <label><input type="radio" name="q4" value="1"> Excel</label><br>
+      <label><input type="radio" name="q4" value="0"> Paint</label><br>
 
-        <p>4. Диаграмма не үшін қажет?</p>
-        <label><input type="radio" name="q4" value="1"> Мәліметті көрнекі көрсету үшін</label><br>
-        <label><input type="radio" name="q4" value="0"> Мәтінді жазу үшін</label><br>
+      <p>5. Орта мән есептеу үшін:</p>
+      <label><input type="radio" name="q5" value="1"> Мәндер диапазоны қажет</label><br>
+      <label><input type="radio" name="q5" value="0"> Тек мәтін</label><br>
 
-        <p>5. Excel-де мәліметтер:</p>
-        <label><input type="radio" name="q5" value="1"> Ұяшықтарға жазылады</label><br>
-        <label><input type="radio" name="q5" value="0"> Кескінге салынады</label><br>
-
-        <button type="button" class="btn" onclick="checkQuiz('quiz3_1', ['1','1','1','1','1'])">Жауаптарды тексеру</button>
-      </form>
-      <div class="result"></div>
-    </div>
+      <button type="button" class="btn" onclick="checkQuiz('theme3_1', ['1','1','1','1','1'])">Жауаптарды тексеру</button>
+    </form>
+    <div class="result" id="result_theme3_1"></div>
   </div>
 
   <script src="script.js"></script>
