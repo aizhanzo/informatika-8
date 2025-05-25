@@ -6,16 +6,28 @@
   <title>8-сынып Информатика</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body onload="checkAuth()">
+<body>
   <div class="hero">
     <img src="img/logo.png" alt="Логотип">
     <h1>ИНФОРМАТИКА</h1>
     <h2>8-СЫНЫП ЭЛЕКТРОНДЫ ОҚУЛЫҚ</h2>
-    <a href="#chapters" class="cta">ТАРАУЛАРҒА ӨТУ</a>
-    <div id="auth-section" class="auth"></div>
+    <a href="#chapters" class="cta" id="enter-btn" style="display: none;">ТАРАУЛАРҒА ӨТУ</a>
+
+    <div id="login-form">
+      <form id="login-form">
+        <input type="text" id="login" placeholder="Логин" required>
+        <input type="password" id="password" placeholder="Құпиясөз" required>
+        <button type="submit" class="btn">Кіру</button>
+      </form>
+    </div>
+
+    <div id="user-greeting" style="display: none;">
+      <p>Қош келдіңіз, <strong id="username-text"></strong>!</p>
+      <button class="btn" onclick="logout()">Logout</button>
+    </div>
   </div>
 
-  <div class="container" id="chapters">
+  <div class="container" id="chapters" style="display: none;">
     <h2>1-Тарау: Ақпарат және ақпараттық процестер</h2>
     <p><a href="theme1_1.html">1.1 Ақпаратты өлшеу</a></p>
     <p><a href="theme1_2.html">1.2 Процессор</a></p>
@@ -33,5 +45,8 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", checkAuth);
+  </script>
 </body>
 </html>

@@ -1,38 +1,36 @@
-
-function checkQuiz(formId, correctAnswers) {
-  const form = document.getElementById(formId);
-  const inputs = form.querySelectorAll('input[type=radio]:checked');
-  let score = 0;
-  inputs.forEach((input, idx) => {
-    if (input.value === correctAnswers[idx]) score++;
-  });
-  form.nextElementSibling.innerText = `Дұрыс жауаптар саны: ${score} / ${correctAnswers.length}`;
-}
-
 function checkAuth() {
-  const authSection = document.getElementById("auth-section");
   const username = localStorage.getItem("username");
 
+  const loginForm = document.getElementById("login-form");
+  const userGreeting = document.getElementById("user-greeting");
+  const usernameText = document.getElementById("username-text");
+  const enterBtn = document.getElementById("enter-btn");
+  const chapters = document.getElementById("chapters");
+
   if (username) {
-    authSection.innerHTML = `
-      <p>Қош келдіңіз, <strong>${username}</strong>!</p>
-      <button class="btn" onclick="logout()">Logout</button>
-    `;
+    loginForm.style.display = "none";
+    userGreeting.style.display = "block";
+    usernameText.innerText = username;
+    enterBtn.style.display = "inline-block";
+    chapters.style.display = "block";
   } else {
-    authSection.innerHTML = `
-      <form onsubmit="login(event)">
-        <input type="text" id="login" placeholder="Логин" required>
-        <input type="password" id="password" placeholder="Құпиясөз" required>
-        <button type="submit" class="btn">Кіру</button>
-      </form>
-    `;
+    loginForm.style.display = "block";
+    userGreeting.style.display = "none";
+    enterBtn.style.display = "none";
+    chapters.style.display = "none";
+  }
+
+  const form = document.querySelector("#login-form form");
+  if (form) {
+    form.addEventListener("submit", login);
   }
 }
 
 function login(event) {
   event.preventDefault();
-  const login = document.getElementById("login").value;
-  const password = document.getElementById("password").value;
+
+  const login = document.getElementById("login").value.trim();
+  const password = document.getElementById("password").value.trim();
 
   if (login === "user" && password === "1234") {
     localStorage.setItem("username", login);
@@ -46,4 +44,3 @@ function logout() {
   localStorage.removeItem("username");
   checkAuth();
 }
-
