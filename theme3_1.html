@@ -28,29 +28,61 @@
 
     <h2>Тест</h2>
     <form id="theme3_1">
-      <p>1. Орташа мән формуласы:</p>
-      <label><input type="radio" name="q1" value="1"> =AVERAGE()</label><br>
-      <label><input type="radio" name="q1" value="0"> =SUM()</label><br>
-
-      <p>2. MAX не есептейді?</p>
-      <label><input type="radio" name="q2" value="1"> Ең үлкен мән</label><br>
-      <label><input type="radio" name="q2" value="0"> Кесте атауы</label><br>
-
-      <p>3. MIN не үшін қолданылады?</p>
-      <label><input type="radio" name="q3" value="1"> Ең кіші мән табу</label><br>
-      <label><input type="radio" name="q3" value="0"> Сандар қосу</label><br>
-
-      <p>4. Статистика үшін қолданылатын құрал:</p>
-      <label><input type="radio" name="q4" value="1"> Excel</label><br>
-      <label><input type="radio" name="q4" value="0"> Paint</label><br>
-
-      <p>5. Орта мән есептеу үшін:</p>
-      <label><input type="radio" name="q5" value="1"> Мәндер диапазоны қажет</label><br>
-      <label><input type="radio" name="q5" value="0"> Тек мәтін</label><br>
-
-      <button type="button" class="btn" onclick="checkQuiz('theme3_1', ['1','1','1','1','1'])">Жауаптарды тексеру</button>
+      <p>1. Статистикалық зерттеулер негізінде алынған сандық сипаттамалардың жиынтығы:</p>
+      <label><input type="radio" name="q1" value="0"> Статистика</label><br>
+      <label><input type="radio" name="q1" value="1"> статистикалық мәліметтер</label><br>
+      <label><input type="radio" name="q1" value="0"> деректер шамасы</label><br>
+    
+      <p>2. Статистикалық мәліметтерді жүргізетін программа:</p>
+      <label><input type="radio" name="q2" value="0"> Power Point</label><br>
+      <label><input type="radio" name="q2" value="1"> Excel</label><br>
+      <label><input type="radio" name="q2" value="0"> Publisher</label><br>
+    
+      <p>3. Формуланы есептеу үшін қандай батырма басылады?</p>
+      <label><input type="radio" name="q3" value="1"> Enter</label><br>
+      <label><input type="radio" name="q3" value="0"> Cntrl</label><br>
+      <label><input type="radio" name="q3" value="0"> Shift</label><br>
+    
+      <p>4. Ұяшықта дұрыс жазылған формуланы табыңыз:</p>
+      <label><input type="radio" name="q4" value="0"> B3*C5</label><br>
+      <label><input type="radio" name="q4" value="1"> =B2/C6</label><br>
+      <label><input type="radio" name="q4" value="0"> C7^2</label><br>
+    
+      <p>5. Формуланы жазу барысында қолданылатын объект адресі:</p>
+      <label><input type="radio" name="q5" value="0"> ұяшық</label><br>
+      <label><input type="radio" name="q5" value="0"> теңдік</label><br>
+      <label><input type="radio" name="q5" value="1"> сілтеме</label><br>
+    
+      <p>6. Жолдар мен бағандардың қиылысы:</p>
+      <label><input type="radio" name="q6" value="1"> ұяшық</label><br>
+      <label><input type="radio" name="q6" value="0"> теңдік</label><br>
+      <label><input type="radio" name="q6" value="0"> сілтеме</label><br>
+    
+      <p>7. Абсолютті сілтемені қою таңбасы:</p>
+      <label><input type="radio" name="q7" value="0"> %</label><br>
+      <label><input type="radio" name="q7" value="0"> ?</label><br>
+      <label><input type="radio" name="q7" value="1"> $</label><br>
+    
+      <p>8. Дұрыс жазылған абсолютті сілтемені көрсет:</p>
+      <label><input type="radio" name="q8" value="1"> =$B$3+$C$5</label><br>
+      <label><input type="radio" name="q8" value="0"> =B3*C5</label><br>
+      <label><input type="radio" name="q8" value="0"> = $B3*C5</label><br>
+    
+      <p>9. A$2 жазбасында өзгермейтін өрісті табыңыз:</p>
+      <label><input type="radio" name="q9" value="0"> баған өзгермейді</label><br>
+      <label><input type="radio" name="q9" value="1"> жол өзгермейді</label><br>
+      <label><input type="radio" name="q9" value="0"> ұяшық өзгермейді</label><br>
+    
+      <p>10. $B2 жазбасында өзгермейтін өрісті табыңыз:</p>
+      <label><input type="radio" name="q10" value="1"> баған өзгермейді</label><br>
+      <label><input type="radio" name="q10" value="0"> жол өзгермейді</label><br>
+      <label><input type="radio" name="q10" value="0"> ұяшық өзгермейді</label><br>
+    
+      <button type="button" class="btn" onclick="checkQuiz('theme3_1', ['1','1','1','1','1','1','1','1','1','1'])">Жауаптарды тексеру</button>
     </form>
     <div class="result" id="result_theme3_1"></div>
+    
+   
   </div>
 
   <script src="script.js"></script>

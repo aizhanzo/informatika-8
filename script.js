@@ -44,3 +44,19 @@ function logout() {
   localStorage.removeItem("username");
   checkAuth();
 }
+
+function checkQuiz(formId, correctAnswers) {
+  const form = document.getElementById(formId);
+  const resultDiv = document.getElementById("result_" + formId);
+
+  let score = 0;
+  correctAnswers.forEach((correct, index) => {
+    const qName = "q" + (index + 1);
+    const answer = form.querySelector(`input[name="${qName}"]:checked`);
+    if (answer && answer.value === correct) {
+      score++;
+    }
+  });
+
+  resultDiv.innerHTML = `Дұрыс жауаптар саны: <strong>${score} / ${correctAnswers.length}</strong>`;
+}

@@ -28,29 +28,60 @@
 
     <h2>Тест</h2>
     <form id="theme3_4">
-      <p>1. Диаграмма не үшін қажет?</p>
-      <label><input type="radio" name="q1" value="1"> Деректерді көрнекі көрсету үшін</label><br>
-      <label><input type="radio" name="q1" value="0"> Код жазу үшін</label><br>
-
-      <p>2. Баған диаграммасы қайда қолданылады?</p>
-      <label><input type="radio" name="q2" value="1"> Салыстыру үшін</label><br>
-      <label><input type="radio" name="q2" value="0"> Сипаттау үшін</label><br>
-
-      <p>3. Диаграмма жасау үшін не қажет?</p>
-      <label><input type="radio" name="q3" value="1"> Insert → Chart</label><br>
-      <label><input type="radio" name="q3" value="0"> File → Save</label><br>
-
-      <p>4. Диаграмма түрлері:</p>
-      <label><input type="radio" name="q4" value="1"> Баған, дөңгелек</label><br>
-      <label><input type="radio" name="q4" value="0"> Қаріп, шрифт</label><br>
-
-      <p>5. Диаграмманы өзгерту үшін:</p>
-      <label><input type="radio" name="q5" value="1"> Пішімдеу қолдану</label><br>
-      <label><input type="radio" name="q5" value="0"> Көшіру</label><br>
-
-      <button type="button" class="btn" onclick="checkQuiz('theme3_4', ['1','1','1','1','1'])">Жауаптарды тексеру</button>
+      <p>1. Бірінің мәліметтері екіншісін анықтау үшін пайдаланатын кем дегенде екі қатары бар диаграмма түрі:</p>
+      <label><input type="radio" name="q1" value="1"> нүктелік диаграмма</label><br>
+      <label><input type="radio" name="q1" value="0"> графиктік диаграмма</label><br>
+      <label><input type="radio" name="q1" value="0"> кестелік диаграмма</label><br>
+    
+      <p>2. Мәліметтер қатарының өзгерісін көруге арналған диаграмма түрі:</p>
+      <label><input type="radio" name="q2" value="0"> нүктелік диаграмма</label><br>
+      <label><input type="radio" name="q2" value="1"> графиктік диаграмма</label><br>
+      <label><input type="radio" name="q2" value="0"> кестелік диаграмма</label><br>
+    
+      <p>3. Мәліметтердің динамикасын көрсететін, ұяшықтың ішіне тұрғызылған кішкене ғана диаграмма атауы:</p>
+      <label><input type="radio" name="q3" value="1"> спарклайн</label><br>
+      <label><input type="radio" name="q3" value="0"> графиктік диаграмма</label><br>
+      <label><input type="radio" name="q3" value="0"> кестелік диаграмма</label><br>
+    
+      <p>4. Спарклайн диаграммасын құру қай жапсырмада орналасқан:</p>
+      <label><input type="radio" name="q4" value="0"> Файл</label><br>
+      <label><input type="radio" name="q4" value="0"> Вид</label><br>
+      <label><input type="radio" name="q4" value="1"> Вставка</label><br>
+    
+      <p>5. Диаграммадағы қатарлар мәндерінің шартты белгіленуі:</p>
+      <label><input type="radio" name="q5" value="0"> жазба</label><br>
+      <label><input type="radio" name="q5" value="1"> легенда</label><br>
+      <label><input type="radio" name="q5" value="0"> баған</label><br>
+    
+      <p>6. Легенде диаграммада мәліметтердің несін көрсетеді?</p>
+      <label><input type="radio" name="q6" value="1"> атауы мен маркерлерін</label><br>
+      <label><input type="radio" name="q6" value="0"> график пен атауын</label><br>
+      <label><input type="radio" name="q6" value="0"> кесте мен атауын</label><br>
+    
+      <p>7. Санның дәрежесін жазу үшін пернетақтадағы басылатын комбинация:</p>
+      <label><input type="radio" name="q7" value="0"> Shift+8</label><br>
+      <label><input type="radio" name="q7" value="0"> Shift+5</label><br>
+      <label><input type="radio" name="q7" value="1"> Shift+6</label><br>
+    
+      <p>8. Коэффициент пен айнымалылар арасында қойылатын көбейту белгісінің комбинациясы:</p>
+      <label><input type="radio" name="q8" value="1"> Shift+8</label><br>
+      <label><input type="radio" name="q8" value="0"> Shift+5</label><br>
+      <label><input type="radio" name="q8" value="0"> Shift+6</label><br>
+    
+      <p>9. Chart сөзінің аудармасы:</p>
+      <label><input type="radio" name="q9" value="1"> график</label><br>
+      <label><input type="radio" name="q9" value="0"> кесте</label><br>
+      <label><input type="radio" name="q9" value="0"> ұяшық</label><br>
+    
+      <p>10. Scatter chart сөзінің аудармасы:</p>
+      <label><input type="radio" name="q10" value="0"> шағын диаграмма</label><br>
+      <label><input type="radio" name="q10" value="0"> кестелік диаграмма</label><br>
+      <label><input type="radio" name="q10" value="1"> нүктелік диаграмма</label><br>
+    
+      <button type="button" class="btn" onclick="checkQuiz('theme3_4', ['1','1','1','1','1','1','1','1','1','1'])">Жауаптарды тексеру</button>
     </form>
     <div class="result" id="result_theme3_4"></div>
+    
   </div>
 
   <script src="script.js"></script>

@@ -28,27 +28,57 @@
 
     <h2>Тест</h2>
     <form id="theme3_2">
-      <p>1. =SUM не істейді?</p>
-      <label><input type="radio" name="q1" value="1"> Қосады</label><br>
-      <label><input type="radio" name="q1" value="0"> Алады</label><br>
+      <p>1. Нәтиже алу үшін қолданылатын мәліметтер:</p>
+      <label><input type="radio" name="q1" value="1"> аргументтер</label><br>
+      <label><input type="radio" name="q1" value="0"> функциялар</label><br>
+      <label><input type="radio" name="q1" value="0"> ұяшықтар</label><br>
 
-      <p>2. =AVERAGE не үшін қажет?</p>
-      <label><input type="radio" name="q2" value="1"> Орташа мән табу үшін</label><br>
-      <label><input type="radio" name="q2" value="0"> Бірінші мәнді табу үшін</label><br>
+      <p>2. =cos(B1) формуласындағы функция атын көрсет:</p>
+      <label><input type="radio" name="q2" value="0"> =</label><br>
+      <label><input type="radio" name="q2" value="1"> cos</label><br>
+      <label><input type="radio" name="q2" value="0"> B1</label><br>
 
-      <p>3. =IF қандай функция?</p>
-      <label><input type="radio" name="q3" value="1"> Логикалық</label><br>
-      <label><input type="radio" name="q3" value="0"> Графикалық</label><br>
+      <p>3. Статистикалық функцияға жататын функцияны көрсет:</p>
+      <label><input type="radio" name="q3" value="1"> СРЗНАЧ()</label><br>
+      <label><input type="radio" name="q3" value="0"> КОРЕНЬ()</label><br>
+      <label><input type="radio" name="q3" value="0"> ЕСЛИ</label><br>
 
-      <p>4. =ROUND не істейді?</p>
-      <label><input type="radio" name="q4" value="1"> Дөңгелектейді</label><br>
-      <label><input type="radio" name="q4" value="0"> Қосады</label><br>
+      <p>4. Математикалық функцияға жататын функцияны көрсет:</p>
+      <label><input type="radio" name="q4" value="0"> ЕСЛИ</label><br>
+      <label><input type="radio" name="q4" value="0"> СРЗНАЧ</label><br>
+      <label><input type="radio" name="q4" value="1"> СУММ</label><br>
 
-      <p>5. Excel функциясын қалай бастайды?</p>
-      <label><input type="radio" name="q5" value="1"> = таңбасымен</label><br>
-      <label><input type="radio" name="q5" value="0"> ! таңбасымен</label><br>
+      <p>5. Логикалық функцияға жататын функцияны көрсет:</p>
+      <label><input type="radio" name="q5" value="1"> ЕСЛИ</label><br>
+      <label><input type="radio" name="q5" value="0"> СРЗНАЧ</label><br>
+      <label><input type="radio" name="q5" value="0"> СУММ</label><br>
 
-      <button type="button" class="btn" onclick="checkQuiz('theme3_2', ['1','1','1','1','1'])">Жауаптарды тексеру</button>
+      <p>6. A1 және A7 аралығындағы ұяшықтарда жазылған сандардың қосындысын есептейтін формуланы көрсет:</p>
+      <label><input type="radio" name="q6" value="0"> =СУММ(А1,А7)</label><br>
+      <label><input type="radio" name="q6" value="0"> СУММ(А1,А7)</label><br>
+      <label><input type="radio" name="q6" value="1"> =СУММ(А1:А7)</label><br>
+
+      <p>7. A1 және A7 аралығындағы ұяшықтарда жазылған сандардың орташа мәнін есептейтін формуланы көрсет:</p>
+      <label><input type="radio" name="q7" value="1"> =СРЗНАЧ(А1:А7)</label><br>
+      <label><input type="radio" name="q7" value="0"> СРЗНАЧ(А1,А7)</label><br>
+      <label><input type="radio" name="q7" value="0"> =СУММ(А1,А7)</label><br>
+
+      <p>8. Ұяшықтарда жазылған сандардың ең кішісін табатын функция:</p>
+      <label><input type="radio" name="q8" value="0"> ЕСЛИ</label><br>
+      <label><input type="radio" name="q8" value="1"> МИН</label><br>
+      <label><input type="radio" name="q8" value="0"> СУММ</label><br>
+
+      <p>9. Ұяшықтарда жазылған сандардың ең үлкенін табатын функция:</p>
+      <label><input type="radio" name="q9" value="1"> МАКС</label><br>
+      <label><input type="radio" name="q9" value="0"> МИН</label><br>
+      <label><input type="radio" name="q9" value="0"> СУММ</label><br>
+
+      <p>10. A1 және A7 аралығындағы ұяшықтарда жазылған сандардың ең үлкенін табатын формуланы көрсет:</p>
+      <label><input type="radio" name="q10" value="0"> =МАКС(А1,А7)</label><br>
+      <label><input type="radio" name="q10" value="0"> МАКС(А1,А7)</label><br>
+      <label><input type="radio" name="q10" value="1"> =МАКС(А1:А7)</label><br>
+
+      <button type="button" class="btn" onclick="checkQuiz('theme3_2', ['1','1','1','1','1','1','1','1','1','1'])">Жауаптарды тексеру</button>
     </form>
     <div class="result" id="result_theme3_2"></div>
   </div>
